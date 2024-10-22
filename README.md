@@ -1,4 +1,4 @@
-# sleep
+# `@so-dang-cool/sleep`
 
 Pause execution, for TS/JS.
 
@@ -24,3 +24,7 @@ await sleep.minutes(1/2);
 // Promise-based chaining also works:
 sleep.seconds(1).then(() => fetch(/* etc /*));
 ```
+
+Oct 2024, by [J.R. Hill](https://so.dang.cool)
+
+BSD 3-Clause License
