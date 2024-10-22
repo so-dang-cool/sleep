@@ -1,5 +1,6 @@
 {
-	"name": "sleep",
+	"name": "@so-dang-cool/sleep",
+	"version": "1.0.0",
 	"license": "BSD-3-Clause",
 	"module": "src/sleep.ts",
 	"type": "module",
