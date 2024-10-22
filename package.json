@@ -1,0 +1,20 @@
+{
+	"name": "sleep",
+	"license": "BSD-3-Clause",
+	"module": "src/sleep.ts",
+	"type": "module",
+	"scripts": {
+		"fmt": "biome check --fix --unsafe",
+		"lint": "biome check"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"dependencies": {
+		"jsr": "^0.13.2"
+	}
+}
