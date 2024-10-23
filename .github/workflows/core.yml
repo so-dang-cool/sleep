@@ -31,10 +31,12 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           node-version: 22
           cache: pnpm
-      - run: pnpm install
-      - run: pnpm run build
-      - run: |
+      - name: build and publish
+        run: |
           set -x
+          pnpm install
+          pnpm run build
+          find .
           v_published="$(pnpm view @so-dang-cool/sleep --json | jq -r '.["dist-tags"].latest')"
           v_now="$(jq -r '.version' <package.json)"
           if [ $v_published = $v_now ]
