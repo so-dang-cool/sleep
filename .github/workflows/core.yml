@@ -1,5 +1,6 @@
+name: build and publish
+
 on:
-  pull_request:
   push:
     branches: core
 
@@ -14,7 +15,8 @@ jobs:
       - run: pnpm install
       - run: pnpm run lint
       - run: pnpm run build
-  npm:
+  npmjs:
+    name: "publish: npmjs.org"
     needs: build
     runs-on: ubuntu-latest
     permissions:
@@ -46,6 +48,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
   jsr:
+    name: "publish: jsr.io"
     needs: build
     runs-on: ubuntu-latest
     permissions:
