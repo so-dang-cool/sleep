@@ -32,10 +32,17 @@ jobs:
       - run: pnpm install
       - run: pnpm run build
       - run: |
-          pnpm publish \
-            --access public \
-            --publish-branch core \
-            --provenance
+          v_published="$(pnpm view @so-dang-cool/sleep --json | jq -r '.["dist-tags"].latest')"
+          v_now="$(jq '.version' <package.json)"
+          if [ $v_published = $v_now ]
+          then
+            echo "version $v_now is already published"
+          else
+            pnpm publish \
+              --access public \
+              --publish-branch core \
+              --provenance
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
   jsr:
