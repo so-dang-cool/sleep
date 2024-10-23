@@ -17,5 +17,19 @@
 	},
 	"dependencies": {
 		"jsr": "^0.13.2"
-	}
+	},
+	"author": "J.R. Hill",
+	"email": "justin@so.dang.cool",
+	"url": "https://so.dang.cool",
+	"repository": "github:so-dang-cool/sleep",
+	"funding": [
+		{
+			"type": "github (org)",
+			"url": "https://github.com/sponsors/so-dang-cool"
+		},
+		{
+			"type": "github (individual)",
+			"url": "https://github.com/sponsors/booniepepper"
+		}
+	]
 }
