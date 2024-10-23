@@ -2,17 +2,17 @@
 	"name": "@so-dang-cool/sleep",
 	"version": "1.0.1",
 	"license": "BSD-3-Clause",
-	"module": "src/sleep.ts",
+	"module": "src/sleep.js",
 	"type": "module",
 	"scripts": {
+		"build": "tsc",
 		"fmt": "biome check --fix --unsafe",
 		"lint": "biome check"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "latest"
-	},
-	"peerDependencies": {
+		"@tsconfig/node12": "^12.1.3",
+		"@types/bun": "latest",
 		"typescript": "^5.0.0"
 	},
 	"dependencies": {
