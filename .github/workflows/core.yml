@@ -13,6 +13,7 @@ jobs:
         with: { version: 9 }
       - run: pnpm install
       - run: pnpm run lint
+      - run: pnpm run build
   npm:
     needs: build
     runs-on: ubuntu-latest
@@ -28,6 +29,8 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
           scope: '@so-dang-cool'
           cache: pnpm
+      - run: pnpm install
+      - run: pnpm run build
       - run: pnpm publish --access public --publish-branch core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
