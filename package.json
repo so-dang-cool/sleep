@@ -7,13 +7,15 @@
 	"scripts": {
 		"build": "tsc",
 		"fmt": "biome check --fix --unsafe",
-		"lint": "biome check"
+		"lint": "biome check",
+		"test": "vitest"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
 		"@tsconfig/node12": "^12.1.3",
 		"@types/bun": "latest",
-		"typescript": "^5.0.0"
+		"typescript": "^5.0.0",
+		"vitest": "^2.1.3"
 	},
 	"author": "J.R. Hill",
 	"email": "justin@so.dang.cool",
