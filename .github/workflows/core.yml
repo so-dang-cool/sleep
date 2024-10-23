@@ -22,16 +22,19 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with: { version: 9 }
       - uses: actions/setup-node@v4
         with:
           registry-url: 'https://registry.npmjs.org'
-          scope: '@so-dang-cool'
-          cache: npm
-      - run: npm install
-      - run: npm run build
+          node-version: 22
+          cache: pnpm
+      - run: pnpm install
+      - run: pnpm run build
       - run: |
-          npm publish \
+          pnpm publish \
             --access public \
+            --publish-branch core \
             --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
