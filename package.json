@@ -15,9 +15,6 @@
 		"@types/bun": "latest",
 		"typescript": "^5.0.0"
 	},
-	"dependencies": {
-		"jsr": "^0.13.2"
-	},
 	"author": "J.R. Hill",
 	"email": "justin@so.dang.cool",
 	"url": "https://so.dang.cool",
