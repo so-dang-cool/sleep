@@ -4,6 +4,9 @@
 	"license": "BSD-3-Clause",
 	"module": "dist/sleep.js",
 	"types": "dist/sleep.d.ts",
+	"files": [
+	  "/dist"
+	],
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
