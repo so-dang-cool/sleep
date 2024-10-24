@@ -6,6 +6,7 @@ const _sleep = async (millis: number): Promise<void> =>
  * @param millis Number of milliseconds to pause.
  */
 export const sleep: ((millis: number) => Promise<void>) & {
+	millis: (seconds: number) => Promise<void>;
 	seconds: (seconds: number) => Promise<void>;
 	minutes: (minutes: number) => Promise<void>;
 	hours: (hours: number) => Promise<void>;
