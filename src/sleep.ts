@@ -11,6 +11,7 @@ export const sleep: ((millis: number) => Promise<void>) & {
 	minutes: (minutes: number) => Promise<void>;
 	hours: (hours: number) => Promise<void>;
 	days: (days: number) => Promise<void>;
+	until: (date: Date | string | number) => Promise<void>;
 } = Object.assign(_sleep, {
 	/**
 	 * Pause execution for a number of milliseconds.
@@ -41,4 +42,15 @@ export const sleep: ((millis: number) => Promise<void>) & {
 	 * @param days Number of days to pause.
 	 */
 	days: async (days: number): Promise<void> => _sleep(days * 86_400_000),
+
+	/**
+	 * Pause execution until a specified datetime.
+	 *
+	 * If the input is a string or number, it will be first passed to
+	 * new Date(datetime).
+	 *
+	 * @param datetime Date, string, or number.
+	 */
+	until: async (date: Date | string | number): Promise<void> =>
+		_sleep(+(date instanceof Date ? date : new Date(date)) - Date.now()),
 });
