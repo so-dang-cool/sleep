@@ -12,11 +12,15 @@ import { sleep } from "@so-dang-cool/sleep"
 console.log("Let's begin.");
 await sleep.millis(500);
 
-console.log("Now wait a second!");
+console.log("Wait a second!");
 await sleep.seconds(1);
 
 console.log("Now wait just half a minute!");
 await sleep.minutes(1/2);
+
+console.log("Wait until next week! (good luck)");
+const oneWeek = 1000 * 60 * 60 * 24 * 7;
+await sleep.until(Date.now() + oneWeek);
 
 // Also:
 //
