@@ -7,7 +7,7 @@
 	"type": "module",
 	"scripts": {
 		"build": "tsc",
-		"fmt": "biome check --fix --unsafe",
+		"fmt": "biome check --write --unsafe",
 		"lint": "biome check",
 		"test": "vitest"
 	},
