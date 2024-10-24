@@ -1,4 +1,8 @@
-# `@so-dang-cool/sleep`
+[![JSR](https://jsr.io/badges/@so-dang-cool/sleep)](https://jsr.io/@so-dang-cool/sleep)
+[![NPM Version](https://img.shields.io/npm/v/@so-dang-cool/sleep)](https://www.npmjs.com/package/@so-dang-cool/sleep)
+[![GitHub last commit](https://img.shields.io/github/last-commit/so-dang-cool/sleep)](https://github.com/so-dang-cool/sleep)
+
+# `@so-dang-cool/sleep` 💤
 
 Pause execution, for TS/JS.
 
