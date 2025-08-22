@@ -35,7 +35,10 @@ sleep.seconds(1).then(() => fetch(/* etc /*));
 
 ## DIY
 
-If you prefer to avoid dependencies, these are the mechanics of the
+<details>
+<summary>Roll your own</summary>
+
+If you prefer to avoid small dependencies, these are the mechanics of the
 `sleep(...)` and `sleep.<duration>(...)` functions:
 
 ```ts
@@ -56,6 +59,7 @@ execution with millisecond-level granularity.
 This is a publicly well-known pattern in JavaScript, and numerous examples
 existed before this library. You do not have to reference this project in
 order to implement your own version of `sleep(...)`.
+</details>
 
 ## Etc
 
