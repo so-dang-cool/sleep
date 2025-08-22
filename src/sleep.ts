@@ -3,7 +3,7 @@ const _sleep = async (millis: number): Promise<void> =>
 
 /**
  * Pause execution for a number of milliseconds.
- * @param millis Number of milliseconds to pause.
+ * @param millis Number of milliseconds to sleep.
  */
 export const sleep: ((millis: number) => Promise<void>) & {
 	millis: (millis: number) => Promise<void>;
@@ -15,31 +15,31 @@ export const sleep: ((millis: number) => Promise<void>) & {
 } = Object.assign(_sleep, {
 	/**
 	 * Pause execution for a number of milliseconds.
-	 * @param millis Number of milliseconds to pause.
+	 * @param millis Number of milliseconds to sleep.
 	 */
 	millis: _sleep,
 
 	/**
 	 * Pause execution for a number of seconds.
-	 * @param seconds Number of seconds to pause.
+	 * @param seconds Number of seconds to sleep.
 	 */
 	seconds: async (seconds: number): Promise<void> => _sleep(seconds * 1000),
 
 	/**
 	 * Pause execution for a number of minutes.
-	 * @param minutes Number of minutes to pause.
+	 * @param minutes Number of minutes to sleep.
 	 */
 	minutes: async (minutes: number): Promise<void> => _sleep(minutes * 60_000),
 
 	/**
 	 * Pause execution for a number of hours.
-	 * @param hours Number of hours to pause.
+	 * @param hours Number of hours to sleep.
 	 */
 	hours: async (hours: number): Promise<void> => _sleep(hours * 3_600_000),
 
 	/**
 	 * Pause execution for a number of days.
-	 * @param days Number of days to pause.
+	 * @param days Number of days to sleep.
 	 */
 	days: async (days: number): Promise<void> => _sleep(days * 86_400_000),
 
